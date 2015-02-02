@@ -72,8 +72,5 @@ Performance:
 Memory:
  NeuralNetwork designed to handle EEG data so quite memory hungry. All inputs will be loaded into memory including hiddenlayer, error and delta values. Valgrind (memory leak tool for C++) reports no error and on my system it is using aroung 1gb memory for the sample data. I have also developed Cuda and MPI versions for large dataset to share every single iteration between machines. Soon I will be sharing them too.
 
-Exception handling:
- I have left my job to complete this study and I learn a lot. But unfortunately I dont have more time/resources to include improved exception handling,comments. So again: use with caution!
-
 License:
  All code under BSD 2 license if you have conflict let me know I will do my best to help.
