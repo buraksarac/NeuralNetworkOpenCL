@@ -2,7 +2,7 @@
 
 
 Parameters:
-
+```
 --help	This help info
 
 -x	X(input) file path (just space delimiter accepted currently)
@@ -34,7 +34,7 @@ Parameters:
 
 
 Please see http://www.u-db.org for more details
-
+```
  
 Installation:
  Application using Posix threads and OpenCL so since you installed OpenCL any linux machine should run without any problem. I just tested on ubuntu so please let me know if you are successful on mac,redhat,suse or any other distro. (burak@linux.com)
@@ -42,9 +42,10 @@ Installation:
 After you download the source code, locate into Release folder:
 
 cd NeuralNetworkOpenCL/Release
+```
 make clean
 make all
-
+```
 If your build successfull then you will see finished message, if not please inform me I will try to help.
 
 How does it work:
@@ -55,13 +56,13 @@ Example Usage:
  application comes with sample input data. Again samples based on Andrew NG tutorial which contains various pixel data of numbers from 1 to 10 for image recognition. Since you train with more iterations you will notice that prediction rate will increase. If you have less then 10000 row I recommend you to use multicore version.
 
  Running the samples (x.dat and y.dat file in release folder) you can copy below code:
-
+```
  ./NeuralNetworkOpenCL -x x.dat -y y.dat -r 5000 -c 400 -n 10 -t 3 -h 25 -i 10 -l 1 -p 1 -st 0
-
+```
 To increase the iteration and learning rate simply increase -i parameter. And if you want to save results set -st parameter to 1. When training finish you will see an output mentioning “thetas_xxxx.dat file has been saved.” So for your next trainign copy “thetas_xxxx.dat” then set -lt to 1 and -tp to “thetas_xxxx.dat”. Then your params should look similar to below:
-
+```
 ./NeuralNetworkOpenCL -x x.dat -y y.dat -r 5000 -c 400 -n 10 -t 3 -h 25 -i 10 -l 1 -p 1 -st 1 -lt 1 -tp  thetas_xxxx.dat
-
+```
 For other params you can run --help.
 
 
