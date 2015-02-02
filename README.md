@@ -67,8 +67,7 @@ For other params you can run --help.
 
 
 Performance:
- I have amd 8350 8 core processor overlocked to 4.6 ghz and 16 gb ram, sapphire toxic r9 280x. On my system each neural calculation took:
-for 8 core: 20 ms.
+ I have amd 8350 8 core processor overlocked to 4.6 ghz and 16 gb ram, sapphire toxic r9 280x. On my system each neural calculation took 20 ms.
 
 Memory:
  NeuralNetwork designed to handle EEG data so quite memory hungry. All inputs will be loaded into memory including hiddenlayer, error and delta values. Valgrind (memory leak tool for C++) reports no error and on my system it is using aroung 1gb memory for the sample data. I have also developed Cuda and MPI versions for large dataset to share every single iteration between machines. Soon I will be sharing them too.
